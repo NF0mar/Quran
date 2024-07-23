@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@font-face {
+    font-family: 'Surahs';
+    src: url(/src/fonts/DTHULUTH.TTF);
+}
+
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General Styling */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    margin-top: 50px;
+}
+
+.noble-quran {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 25px;
+    color: #00acc1;
+}
+
+.searchArea{
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    width: 40%;
+    margin-top: 1.875em;
+    padding: 1.375em 3.438em;
+    background-color: #f8f9fa;
+    font-size: 1.25rem;
+    border: 1px solid #ced4da;
+    border-radius: 1.563%;
+    border: 1px solid #ced4da;
+}
+
+.search:focus{
+    outline: none;
+    border-color:#42eaff;
+    color: #495057;
+    box-shadow: 0 0 0 0.2rem rgba(0, 172, 193, 0.25);
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    margin-top: 1.25em;
+    display: none;
+}
+
+.container {
+    max-width: 1370px;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.surah-info {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+}
+
+.surah-info:hover {
+    border-color: #00acc1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.surah-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.surah-names a {
+    text-decoration: none;
+    margin: 30px;
+    font-size: 20px;
+    color: #00acc1;
+}
+
+.surah-en {
+    font-family: 'Roboto', sans-serif;
+}
+
+.surah-ar {
+    font-family: Surahs;
+    font-size: 25px;
+}
+
+
+.ayah-number {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    font-size: 20px;
+    background-color: #00acc1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 660px) {
+    
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .search{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 450px) {
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+@media screen and (min-width: 660px) {
+    
+    .container {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .surah-ar {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 14400px){
+    .container {
+        width: 1570px;
+      grid-template-columns: repeat(3,1fr);
+    }
+}
