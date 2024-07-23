@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const getSurrah = async() => {
-        loader.style.display = 'block';
+        // loader.style.display = 'block';
         let response = await fetch("https://api.alquran.cloud/v1/quran/quran-uthmani");
         let surah = await response.json();
-        loader.style.display = 'none';
+        // loader.style.display = 'none';
         surah.data.surahs.forEach((sura) => {
             structure(sura.number, sura.englishName, sura.name);
         })
