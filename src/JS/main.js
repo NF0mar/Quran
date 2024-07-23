@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML += `
         <div class="surah-info">
             <div class="surah-names">
-                <a href="http://127.0.0.1:5500/src/pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
-                <a href="http://127.0.0.1:5500/src/pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
+                <a href="https://nf0mar.github.io/src/pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
+                <a href="https://nf0mar.github.io/src/pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
             </div>
             <span class="ayah-number">${surahNumber}</span>
         </div>`;
