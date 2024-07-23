@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div  class ="aayah">
                 <a href="" dir='rtl' lang='ar'>
                     ${ayaSplit[1]}
-                    <img src="/src/images/ayah.png" class="ayah-sign">
+                    <img src="../images/ayah.png" class="ayah-sign">
                     <span class ="ayah-number">${ayanumber}</span>
                 </a>
             </div>`;
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class = "aayah">
                 <a href="" dir='rtl' lang='ar'>
                     ${aya}
-                    <img src="/src/images/ayah.png" class="ayah-sign">
+                    <img src="../images/ayah.png" class="ayah-sign">
                     <span class ="ayah-number">${ayanumber}</span>
                 </a>
             </div>`;
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tafsiir = async (suraNum, ayaNum, verseElement) => {
-        let response = await fetch(`/quraanJson/${suraNum}.json`);
+        let response = await fetch(`../quraanJson/${suraNum}.json`);
 
         let sura = await response.json();
 
