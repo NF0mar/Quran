@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML += `
         <div class="surah-info">
             <div class="surah-names">
-                <a href="https://nf0mar.github.io/Quran/src/pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
-                <a href="https://nf0mar.github.io/Quran/src/pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
+                <a href="/src/pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
+                <a href="/src/pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
             </div>
             <span class="ayah-number">${surahNumber}</span>
         </div>`;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getSurrah = async() => {
         loader.style.display = 'block';
-        let response = await fetch("http://api.alquran.cloud/v1/quran/quran-uthmani");
+        let response = await fetch("https://api.alquran.cloud/v1/quran/quran-uthmani");
         let surah = await response.json();
         loader.style.display = 'none';
         surah.data.surahs.forEach((sura) => {
