@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tafsiir = async (suraNum, ayaNum, verseElement) => {
-        let response = await fetch(`/quraanJson/${suraNum}.json`);
+        let response = await fetch(`/Quran/quraanJson/${suraNum}.json`);
 
         if (!response.ok) {
             console.error('Network response was not ok', response.statusText);
