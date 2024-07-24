@@ -68,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const tafsiir = async (suraNum, ayaNum, verseElement) => {
         let response = await fetch(`/quraanJson/${suraNum}.json`);
 
+        if (!response.ok) {
+            console.error('Network response was not ok', response.statusText);
+            return;
+        }
+    
+
         let sura = await response.json();
 
         let tafsiirHtml = `
@@ -82,20 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         verseElement.insertAdjacentHTML('afterend', tafsiirHtml);
 
         console.log(sura);
-
-        // let tafsiirDiv = document.createElement('div');
-        // tafsiirDiv.setAttribute('dir', 'ltr');
-        // tafsiirDiv.setAttribute('lang', 'en');
-        
-        // tafsiirDiv.innerHTML = `
-        //     <a class="aayah-tafsiir" href="">
-        //         ${sura.result[ayaNum - 1].translation}
-        //     </a>
-        //     <hr>
-        // `;
-        
-        // container.appendChild(tafsiirDiv);
-        // console.log(sura);
     }
 
 reading(numberOfSurah[1])
