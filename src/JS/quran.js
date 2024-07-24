@@ -90,6 +90,20 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(sura);
     }
 
+    document.addEventListener('scroll', () => {
+        const {scrollTop,scrollHeight,clientHeight} = document.documentElement;
+    
+        if(scrollTop + clientHeight >= scrollHeight){
+            
+            setTimeout( () => {
+                offset++;
+                reading(numberOfSurah[1]);
+    
+            },1000);
+    
+        }
+    })
+
 reading(numberOfSurah[1])
 
 })

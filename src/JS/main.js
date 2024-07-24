@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getSurrah();
 
-    let searchInput = document.querySelector("#search-input");
+    let searchInput = document.querySelector(".search");
     searchInput.addEventListener('input', surahSearch);
     // document.addEventListener('input', surahSearch)
     
