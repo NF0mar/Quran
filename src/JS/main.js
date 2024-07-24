@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML += `
         <div class="surah-info">
             <div class="surah-names">
-                <a href="./src/pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
-                <a href="./src/pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
+                <a href="../pages/quran.html?id=${surahNumber}" class="surah-en">${surahEnglish}</a>
+                <a href="../pages/quran.html?id=${surahNumber}" class="surah-ar">${surahArabic}</a>
             </div>
             <span class="ayah-number">${surahNumber}</span>
         </div>`;
@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-getSurrah();
+    getSurrah();
 
-document.addEventListener('input', surahSearch)
+    let searchInput = document.querySelector("#search-input");
+    searchInput.addEventListener('input', surahSearch);
+    // document.addEventListener('input', surahSearch)
     
 })
