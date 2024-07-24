@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tafsiir = async (suraNum, ayaNum, verseElement) => {
-        let response = await fetch(`../quraanJson/${suraNum}.json`);
+        let response = await fetch(`/quraanJson/${suraNum}.json`);
 
         let sura = await response.json();
 
